@@ -23,3 +23,13 @@ data Cartesian2D = Cartesian2D Double Double
 -- Angle and distance (magnitude).
 data Polar2D = Polar2D Double Double
                deriving (Eq, Show)
+
+bookID      (Book id title authors) = id
+bookTitle   (Book id title authors) = title
+bookAuthors (Book id title authors) = authors
+
+data Customer = Customer {
+      customerID      :: CustomerID
+    , customerName    :: String
+    , customerAddress :: Address
+    } deriving (Show)

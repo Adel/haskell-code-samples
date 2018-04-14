@@ -1,4 +1,4 @@
-module Problems.Lists (myLast, myButLast, myButLast', myButLast'', elementAt)  where
+module Problems.Lists (myLast, myButLast, myButLast', myButLast'', elementAt, myLength)  where
 
 import Data.Char
 
@@ -20,3 +20,8 @@ myButLast'' = head . reverse . init
 -- Problem 3: K'th element of a list
 elementAt :: [a] -> Int -> a
 elementAt xs n = if (n == 1) then head xs else elementAt (tail xs) (n - 1)
+
+-- Problem 4: Find the number of elements of a list
+myLength :: [a] -> Int
+myLength [] = 0
+myLength (_:xs) = 1 + myLength xs

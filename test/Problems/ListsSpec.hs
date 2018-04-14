@@ -36,3 +36,10 @@ spec = do
      elementAt [1..] 1 `shouldBe` 1
     it "should work on infinite lists" $ do
      elementAt [1,2..] 5 `shouldBe` 5
+  describe "myLength" $ do
+    it "should return 0 for an empty list" $ do
+     myLength [] `shouldBe` 0
+    it "should return correct element" $ do
+     myLength [1] `shouldBe` 1
+    it "should return correct element even if last element" $ do
+     myLength ["foo","bar"] `shouldBe` 2
